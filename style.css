@@ -1,0 +1,195 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+  background: #f5f5f5;
+}
+
+body, .navSection, .heroSection, .aboutSection, .projectSection {
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+svg{
+  width: 20px;
+  height: 20px;
+  fill: #000;
+}
+
+.navSection {
+  position: absolute;
+  top: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  padding: 20px 80px;
+  border-radius: 50px;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1;
+}
+
+
+
+.navSection .Logo {
+  display: flex;             
+  align-items: center;        
+  gap: 10px;                   
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.navSection .Logo img {
+  width: 50px;             
+  height: auto;
+}
+
+.navSection ul{
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.heroSection{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 150px 80px;
+  background: #bafffa;
+}
+
+.heroSection .heroImage img {
+  width: 200px;       /* bigger than 20px so it's visible */
+  height: auto;       /* keep proportions */
+  border-radius: 50px 0; /* rounded corners */
+  object-fit: cover;  /* crop image neatly */
+}
+
+.heroSection .heroButtons{
+  position: absolute;
+  display: flex;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  gap: 20px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 50px;
+}
+
+.heroButtons button{
+
+}
+
+#toggle {
+  display: none;
+}
+
+/* Toggle button style */
+
+.displayMode {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.displayMode label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background: #e0e0e0;
+  width: 50px;
+  height: 26px;
+  border-radius: 50px;
+  position: relative;
+  transition: background 0.3s ease;
+}
+
+.displayMode label .circle {
+  background: #fff;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* Dark Mode (when checkbox checked) */
+#toggle:checked ~ .navSection,
+#toggle:checked ~ .heroSection,
+#toggle:checked ~ .aboutSection,
+#toggle:checked ~ .projectSection,
+#toggle:checked ~ body {
+  background: #121212;
+  color: #e5e5e5;
+}
+
+#toggle:checked ~ .navSection {
+  background: #1e1e1e;
+  box-shadow: 0 2px 5px rgba(255,255,255,0.1);
+}
+
+#toggle:checked ~ .heroSection {
+  background: #1f2a2a;
+}
+
+#toggle:checked ~ .aboutSection {
+  background: #181818;
+}
+
+/* Switch animation */
+#toggle:checked + .navSection .displayMode label {
+  background: #4a90e2;
+}
+
+#toggle:checked + .navSection .displayMode label .circle {
+  transform: translateX(24px);
+  background: #121212;
+}
+
+input{
+  display: none;
+}
+
+.projectSection{
+  display: flex;
+  position: relative;
+}
+
+.tab-name{
+  color: #4a90e2;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+}
+
+input:checked + label .tab-name{
+  font-weight: 600;
+  border-bottom: 2px solid #4a90e2; 
+}
+
+.tab-content{
+  display: none;
+  position: absolute;
+  opacity: 0;
+  z-index: 0;
+}
+
+input:checked + label .tab-content{
+  display: block;
+  position: static;
+  opacity: 1;
+  z-index: 1;
+  transition: opacity 0.3s ease;
+}
