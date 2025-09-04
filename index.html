@@ -42,40 +42,144 @@
   <section class="heroSection" id="heroSection">
     <div class="heroText">
       <h1>Welcome to My Portfolio</h1>
-      <p>Discover my projects and skills.</p>
     </div>
-    <div class="heroButtons">
-        <a href="#projectSection" class="btn">View Projects</a>
-        <a href="#contactSection" class="btn">Hire Me</a>
+
+    <div class="heroContent">
+        <div class="heroButtons">
+          <a href="#projectSection" class="btnProj">View Projects</a>
+          <a href="#contactSection" class="btnHire">Hire Me</a>
+        </div>
+        <div class="heroImage">
+          <img src="img/nylconde.png" alt="Hero Image">
+        </div>
+    </div>
+</section>
+
+<section class="aboutSection" id="aboutSection">
+    <div class="aboutHeading">
+      <h2>About Me</h2>
+    </div>
+  
+    <div class="card-list">
+      <a href="#" class="card-item">
+        <img src="img/educ_00000.jpg" alt="Card Image">
+        <span class="edyear">2020-2023</span>
+        <h3>Agusan National High School- SHS </h3>
+        <h4><br><i>Humanities and Social Sciences</i></h4>
+        <span class="edyear">2023-present</span>
+        <h3>Caraga State University </h3>
+        <h4><br><i>Bachelor of Science in Computer Science <br>College of Computer and Information Sciences</i></h4>
+      </a>
+
+      <a href="#" class="card-item">
+        <img src="img/expnc_00000.jpg" alt="Card Image">
+        <span class="expyear">2020-2022</span>
+        <h3>Video Editor </h3>
+        <h4><br><i>Cinematic, Motion Graphics, etc.</i></h4>
+        <span class="expyear">2020-2022</span>
+        <h3>Freelance Graphics Designer </h3>
+        <h4><br><i>Poster, Social Media, etc.</i></h4>
+        <span class="expyear">2025- Present</span>
+        <h3>Creatives Committee - USG </h3>
+        <h4><br><i>Video, Graphics, Merch Layout, Technical Setup</i></h4>
+      </a>
+
+      <a href="#" class="card-item">
+        <img src="img/tech_00000.jpg" alt="Card Image">
+        <span class="techyear">Software Skills</span>
+        <h3>After Effects, Photoshop, Premier Pro, Adobe Illustrator, Obs Studio, Virtual DJ</h3>
+        <span class="techyear">Coding Skills</span>
+        <h3>HTML, CSS, Javascript, C, and Python</h3>
+      </a>
+    </div>
+  </section>
+
+<section class="projectSection" id="projectSection"> 
+  <!-- Radio buttons -->
+  <input type="radio" name="option" id="tab1" checked>
+  <input type="radio" name="option" id="tab2">
+  <input type="radio" name="option" id="tab3">
+  <input type="radio" name="option" id="tab4">
+
+  <!-- Tabs row -->
+  <div class="tabs">
+    <label for="tab1" class="tab-name">Graphics Design</label>
+    <label for="tab2" class="tab-name">Web Development</label>
+    <label for="tab3" class="tab-name">Video Editing</label>
+    <label for="tab4" class="tab-name">Technicals</label>
+  </div>
+
+  <!-- Tab content area -->
+  <div class="tab-contents">
+    <!-- Tab 1 -->
+    <div class="tab-content" id="content1">
+      <div class="projects-grid">
+        <div class="project-card"><img src="img/proj/img1.jpg" alt="Project 1"></div>
+        <div class="project-card"><img src="img/proj/img2.png" alt="Project 1"></div>
+        <div class="project-card"><img src="img/proj/BLACK ROBEC.png" alt="Project 1"></div>
+        <div class="project-card"><img src="img/proj/WHITE ROBEC.png" alt="Project 1"></div>
       </div>
-    <div class="heroImage">
-      <img src="img/pic.jpg" alt="Hero Image">
     </div>
-  </section>
 
-  <section class="aboutSection" id="aboutSection">
-    <h2>About Me</h2>
-    <p>Hello! I'm Nyl, a passionate developer with experience in web development and design. I love creating beautiful and functional websites.</p>
-    <div class="experience-container">
-
+    <!-- Tab 2 -->
+    <div class="tab-content" id="content2">
+      <div class="projects-grid">
+        <!-- Same 4x4 layout for graphics design -->
+        <div class="project-card"><img src="img/proj/17.jpg" alt="Project 1"></div>
+        <div class="project-card"><img src="img/proj/18.jpg" alt="Project 1"></div>
+        <div class="project-card"><img src="img/proj/19.jpg" alt="Project 1"></div>
+        <div class="project-card"><img src="img/proj/20.jpg" alt="Project 1"></div>
+      </div>
     </div>
-    <img src="img/about_image.png" alt="About Me Image">
-  </section>
 
-  <section class="projectSection" id="projectSection">
-    <input type="radio" name="option" id="1">
-    <label for="1">
-      <div class="tab-name">Web Development</div>
-      <div class="tab-content">SKibidi</div>
-    </label>
+    <!-- Tab 3 -->
+    <div class="tab-content" id="content3">
+      <div class="projects-grid">
+        <div class="project-card"><img src="img/proj/vid.jpg" alt=""></div>
+      </div>
+    </div>
 
-    <input type="radio" name="option" id="2">
-    <label for="2">
-      <div class="tab-name">Design</div>
-      <div class="tab-content">S123</div>
-    </label>
-  </section>
+    <!-- Tab 4 -->
+    <div class="tab-content" id="content4">
+      <div class="projects-grid">
+        <div class="project-card"><img src="img/proj/tech1.jpg" alt=""></div>
+        <div class="project-card"><img src="img/proj/tech2.jpg" alt=""></div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<section class="contact" id="contactSection">
+    <div class="contact-container"> 
+        <img src="img/Location copy.png" alt="">
+        <h1>Say hello to me!</h1>
+        <div class="ptag">
+        <p>I'm open for any work that are related to my skillset.</p></div>
+        <div class="side-contact">
+            <ul><li>Address:<br><span>205 Hidalgo Village, Libertad, Butuan City</span></li>
+                <br><li>Phone:<br><span>+63 9638 1210 05</span></li>
+                <br><li>E-mail:<br><span>aldrinnyl123@gmail.com</span></li>
+            </ul>
+        </div>
+        <div class="contact-button">
+            <button>Contact Now</button>
+        </div> 
+    </div>
+</section> 
 
+<!-- FOOTER -->
+<footer class="footer">
+    <ul>
+        <li><i class="fa-brands fa-facebook"></i></li>
+        <li><i class="fa-brands fa-instagram"></i></li>
+        <li><i class="fa-brands fa-linkedin"></i></li>
+        <li><i class="fa-brands fa-tiktok"></i></li>
+        <li><i class="fa-brands fa-discord"></i></li>
+    </ul>
+    <div class="footer-logo">
+      <br><span>Aldrin Nyl G. Conde</span>
+    </div>
+    <h6>© All Rights Reserved</h6>
+</footer>
 </body>
 </html>
