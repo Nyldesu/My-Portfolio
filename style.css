@@ -95,7 +95,7 @@ svg{
   text-align: center;
   font-family: 'Poppins', sans-serif;
   color: #ED7D31;
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 .heroSection .heroContent {
@@ -177,6 +177,11 @@ svg{
   gap: 10px;
 }
 
+.navSection .displayMode span{
+  font-size: 14px;
+  color: #1f2a2a;
+}
+
 .displayMode label {
   cursor: pointer;
   display: flex;
@@ -201,32 +206,135 @@ svg{
 }
 
 
-/* Dark Mode (when checkbox checked) */
-#toggle:checked ~ .navSection,
-#toggle:checked ~ .heroSection,
-#toggle:checked ~ .aboutSection,
-#toggle:checked ~ .projectSection,
-#toggle:checked ~ .contactSection,
-#toggle:checked ~ .footer,
+/* ===== DARK MODE FOR ALL SECTIONS ===== */
 #toggle:checked ~ body {
   background: #121212;
   color: #e5e5e5;
 }
 
+/* NAVIGATION */
 #toggle:checked ~ .navSection {
-  background: #1e1e1e;
+  background: #1f2a2a;
   box-shadow: 0 2px 5px rgba(255,255,255,0.1);
 }
 
-#toggle:checked ~ .heroSection {
-  background: #1f2a2a;
+#toggle:checked ~ .navSection a, .displayMode span{
+  color: #e5e5e5;
 }
 
+#toggle:checked ~ .navSection a.active {
+  color: #4a90e2;
+  border-bottom: 2px solid #4a90e2;
+}
+
+/* HERO SECTION */
+#toggle:checked ~ .heroSection {
+  background: #000000;
+}
+
+#toggle:checked ~ .heroSection .heroText h1 {
+  color: #4a90e2;
+}
+
+#toggle:checked ~ .heroSection .heroButtons {
+  background-color: #2a2a2a;
+}
+
+#toggle:checked ~ .heroSection .btnProj {
+  background: #4a90e2;
+  color: #fff;
+}
+
+#toggle:checked ~ .heroSection .btnHire {
+  background: #ED7D31;
+  color: #fff;
+}
+
+/* ABOUT SECTION */
 #toggle:checked ~ .aboutSection {
   background: #181818;
 }
 
-/* Switch animation */
+#toggle:checked ~ .aboutSection .aboutHeading h1 {
+  color: #ED7D31;
+}
+
+#toggle:checked ~ .aboutSection .card-list .card-item {
+  background-color: #4a90e2;;
+}
+
+#toggle:checked ~ .aboutSection .card-list .card-item h3{
+  color: #ffffff;
+}
+
+#toggle:checked ~ .aboutSection .card-list .card-item h4 {
+  color: #bdbdbd;
+}
+
+/* PROJECT SECTION */
+#toggle:checked ~ .projectSection {
+  background-color: #4a90e2;
+}
+
+#toggle:checked ~ .projectSection .tabs {
+  background-color: #1f2a2a;
+}
+
+#toggle:checked ~ .projectSection .tab-name {
+  color: #FFFFFF;
+}
+
+#toggle:checked ~ .tab-name:hover {
+  color: #ED7D31;
+  background: rgba(237, 125, 49, 0.1);
+}
+
+#toggle:checked ~ .tab-content,
+#toggle:checked ~ .projects-grid .project-card {
+  background: #252525;
+  color: #e5e5e5;
+}
+
+#toggle:checked ~ .project-card img {
+  filter: brightness(0.85);
+}
+
+/* CONTACT SECTION */
+#toggle:checked ~ .contact {
+  background: #1e1e1e;
+  color: #e5e5e5;
+}
+
+#toggle:checked ~ .contact .contact-container h1 {
+  color: #4a90e2;
+  filter: drop-shadow(6px 3px 0px #2c6cb0);
+}
+
+#toggle:checked ~ .contact .contact-container p,
+#toggle:checked ~ .contact .side-contact span {
+  color: #bdbdbd;
+}
+#toggle:checked ~ .contact button {
+  background-color: #4a90e2;
+  color: #fff;
+}
+
+#toggle:checked ~ .contact button:hover {
+  background-color: #ED7D31;
+  color: #fff;
+}
+
+/* FOOTER */
+#toggle:checked ~ .footer {
+  background-color: #1a1a1a;
+  color: #e5e5e5;
+}
+
+#toggle:checked ~ .footer h6 {
+  color: #aaa;
+}
+
+/* SWITCH ANIMATION */
 #toggle:checked + .navSection .displayMode label {
   background: #4a90e2;
 }
@@ -236,15 +344,18 @@ svg{
   background: #121212;
 }
 
+
 /* ===== About Section ===== */
 .aboutSection{
   padding: 200px 20px 80px 20px;
+  background: #4a90e2;
 }
 
-.aboutSection .aboutHeading{
+.aboutSection .aboutHeading h1{
   text-align: center;
-  font-size: 1rem;
-  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  color: #FFFFFF;
+  font-size: 2.5rem;
 }
 
 .card-list {
@@ -322,7 +433,6 @@ input {
   display: none;
 }
 
-/* ================== PROJECT SECTION ================== */
 .projectSection {
   width: 100%;
   min-height: 100vh;
